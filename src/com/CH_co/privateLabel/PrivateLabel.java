@@ -37,7 +37,7 @@ public class PrivateLabel implements PrivateLabelI {
   * @return label's XML setting file URL
   */
   public String getPrivateLabelURL() {
-    return "http://salusafe.com/assets/private-label.xml";
+    return null;
   }
 
   /**
@@ -143,6 +143,22 @@ public class PrivateLabel implements PrivateLabelI {
     throw new UnsupportedOperationException("Not supported yet.");
   }
 
+  public String getUrlFaq() {
+    return "http://salusafe.com/faq";
+  }
+
+  public String getUrlQuickTour() {
+    return "http://salusafe.com/quick-tour";
+  }
+
+  public String getUrlSignup() {
+    return "http://salusafe.com/signup";
+  }
+
+  public String getUrlUsersGuide() {
+    return "http://salusafe.com/user-guide";
+  }
+
   public String getWelcomeEmailFrom() {
     return "support@salusafe.com";
   }
@@ -152,12 +168,32 @@ public class PrivateLabel implements PrivateLabelI {
   }
 
   public String getWelcomeEmailBody() {
-    String url = getHomePage() + "/assets/templates/welcome-email.html";
-    return "<html><FRAMESET cols=\"*\"><FRAME src=\""+url+"\" name=\"welcomeEmailFrame\"></FRAMESET></html>";
+    return "<html>"
+        +"<body marginwidth=\"10\">"
+        +"<h3><font face=\"Verdana, Arial, Helvetica, sans-serif\">Welcome to SaluSafe!</font></h3>"
+        +"<p><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">You're just about to experience how easy secure email and secure online file management can be. Take a quick tour and get started faster. <a href='http://salusafe.com/quick-tour'>http://salusafe.com/quick-tour</a></font></p>"
+        +"<p><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Here's how to get the most out of SaluSafe:</font></p>"
+        +"<ol>"
+        +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Download and install SaluSafe on all your devices. <a href='http://salusafe.com/download'>http://salusafe.com/download</a></font></li>"
+        +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Any file you place in your SaluSafe folder will automatically be available from all your devices. </font></li>"
+        +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Send secure email and replace overnight deliveries or registered mail. <a href='http://salusafe.com/secure-email'>http://salusafe.com/secure-email</a></font></li>"
+        +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Use it for secure chat, individually or in a group. </font></li>"
+        +"</ol>"
+        +"<p><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Congratulations for taking charge of your email privacy, and thank you for choosing us!"
+        +"<br>"
+        +"<br>"
+        +"Welcome to SaluSafe!"
+        +"<br>"
+        +"<i>- The SaluSafe Team</i>"
+        +"</font></p> "
+        +"<p>&nbsp;</p>"
+        +"<p>&nbsp;</p>"
+        +"</body>"
+        +"</html>";
   }
 
   public String getWelcomeTemplate() {
-    return getHomePage() + "/assets/templates/welcome-screen.html";
+    return "http://www.cryptoheaven.com/private-label/salusafe/welcome-screen.htm";
   }
 
 
