@@ -15,10 +15,6 @@ import java.net.URL;
 /** 
  * Copyright 2001-2013 CryptoHeaven Corp. All Rights Reserved.
  *
- * Class Description:
- *
- * <b>$Revision: $</b>
- *
  * @author  Marcin Kurzawa
  */
 public class PrivateLabel implements PrivateLabelI {
