@@ -26,6 +26,10 @@ public class PrivateLabel implements PrivateLabelI {
     return null;
   }
 
+  public boolean getPrivateLabelClassOverwritesXMLvalues() {
+    return true;
+  }
+
   /**
   * @return preferred jar name
   */
@@ -154,23 +158,27 @@ public class PrivateLabel implements PrivateLabelI {
   }
 
   public String getWelcomeEmailBody() {
+    String progName = URLs.get(URLs.SERVICE_SOFTWARE_NAME);
+    String urlQuickTour = URLs.get(URLs.HELP_QUICK_TOUR_PAGE);
+    String urlDownload = URLs.get(URLs.DOWNLOAD_PAGE);
+    String urlSecureEmail = "http://salusafe.com/secure-email";
     return "<html>"
         +"<body marginwidth=\"10\">"
-        +"<h3><font face=\"Verdana, Arial, Helvetica, sans-serif\">Welcome to SaluSafe!</font></h3>"
-        +"<p><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">You're about to experience how easy secure email and messaging can be. You have the most advanced and easy to use encryption technology available at your fingertips. We have put tremendous effort to ensure all your communications are highly protected with strong cryptography, and not just by a privacy policy. Take a quick tour and get started faster. <a href='http://salusafe.com/quick-tour'>http://salusafe.com/quick-tour</a></font></p>"
-        +"<p><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Here's how to get the most out of SaluSafe:</font></p>"
+        +"<h3><font face=\"Verdana, Arial, Helvetica, sans-serif\">Welcome to "+progName+"!</font></h3>"
+        +"<p><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">You're about to experience how easy secure email and messaging can be. You have the most advanced and easy to use encryption technology available at your fingertips. We have put tremendous effort to ensure all your communications are highly protected with strong cryptography, and not just by a privacy policy. Take a quick tour and get started faster. <a href='"+urlQuickTour+"'>"+urlQuickTour+"</a></font></p>"
+        +"<p><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Here's how to get the most out of "+progName+":</font></p>"
         +"<ol>"
-        +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Download and install SaluSafe on all your devices. <a href='http://salusafe.com/download'>http://salusafe.com/download</a></font></li>"
-        +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Any file you place in your SaluSafe folder will automatically be available from all your devices. </font></li>"
-        +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Send secure email and replace overnight courier deliveries. <a href='http://salusafe.com/secure-email'>http://salusafe.com/secure-email</a></font></li>"
+        +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Download and install "+progName+" on all your devices. <a href='"+urlDownload+"'>"+urlDownload+"</a></font></li>"
+        +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Any file you place in your "+progName+" folder will automatically be available from all your devices. </font></li>"
+        +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Send secure email and replace overnight courier deliveries. <a href='"+urlSecureEmail+"'>"+urlSecureEmail+"</a></font></li>"
         +"<li><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Use it for secure chat, individually or in a group. </font></li>"
         +"</ol>"
         +"<p><font size=\"-1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Congratulations for taking charge of your email privacy, and thank you for choosing us!"
         +"<br>"
         +"<br>"
-        +"Welcome to SaluSafe!"
+        +"Welcome to "+progName+"!"
         +"<br>"
-        +"<i>- The SaluSafe Team</i>"
+        +"<i>- The "+progName+" Team</i>"
         +"</font></p> "
         +"<p>&nbsp;</p>"
         +"<p>&nbsp;</p>"
@@ -181,6 +189,5 @@ public class PrivateLabel implements PrivateLabelI {
   public String getWelcomeTemplate() {
     return "http://www.cryptoheaven.com/private-label/salusafe/welcome-screen.htm";
   }
-
 
 }
